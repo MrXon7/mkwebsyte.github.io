@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class buildCard extends StatelessWidget {
-  const buildCard({super.key, this.icon, this.title, this.description});
+  const buildCard({super.key, this.icon, this.title, this.description, this.width});
 
   final icon;
   final title;
   final description;
+  final width;
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Container(
-      width: size.width*0.2,
+      width: width,
       height: 300,
       margin: EdgeInsets.symmetric(horizontal: size.width*0.06, vertical: 50),
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 40),

@@ -9,29 +9,54 @@ class Raxbar_section extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size=MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.only(top:50.0,),
-      child: Row(
+      child: size>=880? Row(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           buildCard(
+            width: size*0.2,
             icon: 'images/avatar.jpg',
             title: 'Direktor',
-            description: 'Whenever you need free templates in HTML CSS, you just remember TemplateMo website.',
+            description: "Direktor haqida ma'lumotlar",
           ),
           buildCard(
+            width: size*0.2,
             icon: 'images/avatar.jpg',
             title: "O'IBDO'",
-            description: 'You can browse free templates based on different tags such as digital marketing, etc.',
+            description: "O'IBDO' haqida ma'lumotlar",
           ),
           buildCard(
+            width: size*0.2,
             icon: 'images/avatar.jpg',
             title: 'MMIBDO\'',
-            description: 'You can start learning HTML CSS by modifying free templates from our website too.',
+            description: "MMIBDO' haqida mal'lumotlar",
           ),
 
         ],
-      ),
+      ):Column(
+        children: <Widget>[
+          buildCard(
+            width: size*0.4,
+            icon: 'images/avatar.jpg',
+            title: 'Direktor',
+            description: "Direktor haqida ma'lumotlar",
+          ),
+          buildCard(
+            width: size*0.4,
+            icon: 'images/avatar.jpg',
+            title: "O'IBDO'",
+            description: "O'IBDO' haqida ma'lumotlar",
+          ),
+          buildCard(
+            width: size*0.4,
+            icon: 'images/avatar.jpg',
+            title: 'MMIBDO\'',
+            description: "MMIBDO' haqida mal'lumotlar",
+          ),
+        ],
+      )
     );
   }
 }

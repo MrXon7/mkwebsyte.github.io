@@ -24,11 +24,25 @@ class AppBarTitle extends StatelessWidget {
           ),
           Row(
             children: [
-              Text("Aloqa uchun: ", style: Theme.of(context).textTheme.bodyLarge!.apply(color: Colors.white)),
-              SizedBox(width: size.width*0.02,),
-              Text('Tel: +998(94)-457-4775', style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white)),
-              SizedBox(width: size.width*0.02,),
-              Text('e-mail: mrxon73@gmail.com ', style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white)),
+              if(size.width>=913)
+                Text("Aloqa uchun: ", style: Theme.of(context).textTheme.bodyLarge!.apply(color: Colors.white)),
+                SizedBox(width: size.width*0.02,),
+              size.width>=776?
+              Row(
+                children: [
+                  Text('Tel: +998(94)-457-4775', style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white)),
+                  SizedBox(width: size.width*0.02,),
+                  Text('e-mail: mrxon73@gmail.com ', style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white)),
+                ],
+              ): size.width>=565?
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    Text('Tel: +998(94)-457-4775', style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white)),
+                    SizedBox(width: size.width*0.02,),
+                    Text('e-mail: mrxon73@gmail.com ', style: Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white)),
+                  ],):SizedBox()
+
             ],
           )
         ],

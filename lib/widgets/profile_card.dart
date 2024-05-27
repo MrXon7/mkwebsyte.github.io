@@ -16,18 +16,23 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0),
-      ),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+            color: Color.fromRGBO(241, 240, 254, 1)
+      ) ,
+      
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 90,
-              backgroundImage: AssetImage(imageUrl),
+            ClipOval(
+              child: Container(
+                width: 150,
+                height: 150,
+                child: Image.asset(imageUrl),
+              ),
             ),
             SizedBox(height: 10),
             Text(
@@ -45,24 +50,6 @@ class ProfileCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     IconButton(
-            //       icon: Icon(Icons.facebook),
-            //       onPressed: () {},
-            //     ),
-            //     IconButton(
-            //       icon: Icon(Icons.twitter),
-            //       onPressed: () {},
-            //     ),
-            //     IconButton(
-            //       icon: Icon(Icons.linkedin),
-            //       onPressed: () {},
-            //     ),
-            //   ],
-            // ),
           ],
         ),
       ),

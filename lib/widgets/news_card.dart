@@ -6,20 +6,18 @@ class CourseCard extends StatelessWidget {
   final String tag;
   final String title;
   final String date;
-  final String duration;
-  final String price;
 
   CourseCard({
     required this.imageUrl,
     required this.tag,
     required this.title,
     required this.date,
-    required this.duration,
-    required this.price,
+
   });
 
   @override
   Widget build(BuildContext context) {
+    final size=MediaQuery.of(context).size.width;
     return Stack(
 
       children: [
@@ -30,7 +28,7 @@ class CourseCard extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Row(
+            child: size>=520? Row(
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
@@ -43,25 +41,66 @@ class CourseCard extends StatelessWidget {
                 ),
                 SizedBox(width: 16),
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 8),
+                  child: Container(
+                    height: 200,
+                    margin: EdgeInsets.only(bottom: 20),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            title,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          SizedBox(height: 8),
 
-                    ],
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ],
-            ),
+            ):
+            Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image.asset(
+                    imageUrl,
+                    width: 300,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(height: 16),
+                Container(
+                  height: 200,
+                  margin: EdgeInsets.only(bottom: 20),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )
           ),
         ),
+
         Positioned(
             bottom: 10,
             right: 10,

@@ -17,28 +17,28 @@ class StudentsSection extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.count(
-          crossAxisCount: 4,
-          crossAxisSpacing: 16.0,
-          mainAxisSpacing: 16.0,
+           crossAxisCount: size.width>=1033?4:size.width>=484?2:1,
+          crossAxisSpacing: 8.0,
+          mainAxisSpacing: 8.0,
           children: [
             ProfileCard(
               imageUrl: 'images/avatar.jpg', // haqiqiy rasm URLini bu yerga qo'ying
-              title: 'UX O\'qituvchisi',
+              title: "O'quvchi",
               name: 'Sophia Rose',
             ),
             ProfileCard(
               imageUrl: 'images/avatar.jpg', // haqiqiy rasm URLini bu yerga qo'ying
-              title: 'Grafik O\'qituvchisi',
+              title: "O'quvchi",
               name: 'Cindy Walker',
             ),
             ProfileCard(
               imageUrl: 'images/avatar.jpg', // haqiqiy rasm URLini bu yerga qo'ying
-              title: 'Full Stack Master',
+              title: "O'quvchi",
               name: 'David Hutson',
             ),
             ProfileCard(
               imageUrl: 'images/avatar.jpg',  // haqiqiy rasm URLini bu yerga qo'ying
-              title: 'Raqamli Animator',
+              title: "O'quvchi",
               name: 'Stella Blair',
             ),
           ],

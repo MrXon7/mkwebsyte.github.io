@@ -22,16 +22,14 @@ class NewsSection extends StatelessWidget {
             tag: 'WEB DESIGN',
             title: 'UI Best Practices',
             date: '16 Feb 2036',
-            duration: '22 Hours',
-            price: '\$120',
+
           ),
           CourseCard(
             imageUrl: 'images/news.jpg', // haqiqiy rasm URLini bu yerga qo'ying
             tag: 'FRONT END',
-            title: 'New Design Trend',
+            title: 'New Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design TrendNew Design Trend',
             date: '24 Feb 2036',
-            duration: '30 Hours',
-            price: '\$320',
+
           ),
         ],
       ),
