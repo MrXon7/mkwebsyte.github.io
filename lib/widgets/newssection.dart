@@ -13,9 +13,9 @@ class NewsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(16),
       height: size.height,
-      child: ListView(
-        padding: EdgeInsets.all(8.0),
+      child: Column(
         children: [
           CourseCard(
             imageUrl: 'images/news.jpg', // haqiqiy rasm URLini bu yerga qo'ying
