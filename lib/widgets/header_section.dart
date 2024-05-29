@@ -26,18 +26,18 @@ class HeaderSection extends StatelessWidget {
           options: CarouselOptions(viewportFraction: 1),
           items: [
             Rounded_image(
-              img_url: "carousel/carousel_1.jpg",
+              img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hibbing_High_School_2014.jpg/1200px-Hibbing_High_School_2014.jpg',
               title: "To'raqo'rg'on tumani \n58-Maktab",
               subtitle:
                   'Scholar is a free CSS template designed by TemplateMo for online educational related websites. This layout is based on the famous Bootstrap v5.3.0 framework.',
             ),
             Rounded_image(
-                img_url: "carousel/carousel_2.jpg",
+                img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hibbing_High_School_2014.jpg/1200px-Hibbing_High_School_2014.jpg',
                 title: "Bu yerda maktab \nhaqida ma'lmot",
                 subtitle:
                     'Scholar is a free CSS template designed by TemplateMo for online educational related websites. This layout is based on the famous Bootstrap v5.3.0 framework.'),
             Rounded_image(
-                img_url: "carousel/carousel_3.jpg",
+                img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hibbing_High_School_2014.jpg/1200px-Hibbing_High_School_2014.jpg',
                 title: "Bu yerda maktab \nhaqida ma'lmot",
                 subtitle:
                     'Scholar is a free CSS template designed by TemplateMo for online educational related websites. This layout is based on the famous Bootstrap v5.3.0 framework.'),

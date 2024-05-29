@@ -11,7 +11,6 @@ class buildCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Container(
-      width: width,
       height: 300,
       margin: EdgeInsets.symmetric(horizontal: size.width*0.06, vertical: 50),
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 40),
@@ -23,21 +22,21 @@ class buildCard extends StatelessWidget {
         clipBehavior: Clip.none,
         children: <Widget>[
           Positioned(
-            top: -100,
-            right: -100,
+            top:-100,
+            right:-75,
             child: ClipOval(
               child: Container(
-                color: Colors.purple,
+                color: Color.fromRGBO(123, 106, 218, 1),
                 width: 150,
                 height: 150,
                 child: Center(
-                  child: Image(image: AssetImage(icon), fit: BoxFit.cover,)
+                  child: Image(image: NetworkImage(icon), fit: BoxFit.cover,)
                 ),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[

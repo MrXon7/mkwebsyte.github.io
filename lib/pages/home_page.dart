@@ -38,20 +38,22 @@ class HomePage extends StatelessWidget {
                   // Body-Header and carousel section
                   HeaderSection(size: size),
                   // Raxbariyat section
-                  SizedBox(height: 100,child: Center(child: Text("Maktab Raxbariyati", style:Theme.of(context).textTheme.displayMedium,),),),
+                  SizedBox(height: 150,child: Center(child: Text("Maktab Raxbariyati", style:TextStyle(fontSize: size.width*0.05, fontWeight: FontWeight.bold)),),),
                   const Raxbar_section(),
                   // About Section
                   AbautSection(size: size),
                   SizedBox(height: 50,),
                   // Namunali o'quvchilar section
-                  SizedBox(child: Center(child: Text("Namunali o'quvchilar", style:Theme.of(context).textTheme.displayMedium,),),),
+                  SizedBox(child: Center(child: Text("Namunali o'quvchilar", style:TextStyle(fontSize: size.width*0.05, fontWeight: FontWeight.bold)),),),
                   StudentsSection(size: size),
                   // News Section
-                  SizedBox(child: Center(child: Text("Maktabda NimaGaplar", style:Theme.of(context).textTheme.displayMedium,),),),
+                  SizedBox(child: Center(child: Text("Maktabda NimaGaplar", style:TextStyle(fontSize: size.width*0.05, fontWeight: FontWeight.bold)),),),
                   NewsSection(size: size),
+                  SizedBox(height: 30),
                   Container(
                     width: size.width,
                     height: 200,
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(123, 106, 218, 1),
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(200), topRight: Radius.circular(200))

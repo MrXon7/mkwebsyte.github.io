@@ -1,11 +1,13 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Rounded_image extends StatelessWidget {
   const Rounded_image({
     super.key, 
-    this.img_url="carousel/carousel_1.jpg", this.title, this.subtitle,
+    this.img_url, this.title, this.subtitle,
   });
 
  
@@ -20,9 +22,10 @@ class Rounded_image extends StatelessWidget {
         width: size.width*0.7,
         // height: size.height*0.5,
         child: ClipRRect(borderRadius: BorderRadius.circular(30), child:  Container(
+
           decoration: BoxDecoration(
-            image:   DecorationImage(
-              image: AssetImage(img_url),
+            image: DecorationImage(
+              image: NetworkImage(img_url),
               fit: BoxFit.cover,
             ),
           ),

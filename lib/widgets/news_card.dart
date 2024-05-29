@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class CourseCard extends StatelessWidget {
-  final String imageUrl;
+  final  imageUrl;
   final String tag;
   final String title;
   final String date;
@@ -32,10 +32,10 @@ class CourseCard extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
-                  child: Image.asset(
+                  child: Image.network(
                     imageUrl,
-                    width: 200,
-                    height: 200,
+                    width: size*0.3,
+                    height: size*0.25,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -68,10 +68,10 @@ class CourseCard extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
-                  child: Image.asset(
+                  child: Image.network(
                     imageUrl,
-                    width: 300,
-                    height: 200,
+                    width: size*0.8,
+                    height: size*0.7,
                     fit: BoxFit.cover,
                   ),
                 ),

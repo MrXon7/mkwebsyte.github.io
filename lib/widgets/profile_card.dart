@@ -17,11 +17,13 @@ class ProfileCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Container(
+      height: 300,
+      width: size.width>=880? size.width*0.225:size.width*0.5,
+      margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
             color: Color.fromRGBO(241, 240, 254, 1)
-      ) ,
-      
+      ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -31,7 +33,7 @@ class ProfileCard extends StatelessWidget {
               child: Container(
                 width: 150,
                 height: 150,
-                child: Image.asset(imageUrl),
+                child: Image.network(imageUrl),
               ),
             ),
             SizedBox(height: 10),
